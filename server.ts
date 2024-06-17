@@ -7,7 +7,7 @@ const startServer= async()=>{
     await connectDB();
 
 
-    const PORT = config.port || 3000;
+    const PORT = config.port || 5173;
 
 
     app.listen(PORT,()=>{
