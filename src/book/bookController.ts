@@ -43,9 +43,10 @@ try {
     folder: "books-pdf",
     format:"pdf"
   })
-console.log("uploadResult:", uploadResult);
+// console.log("uploadResult:", uploadResult);
 
-console.log("bookfile upload:",bookFileUploadResult)
+// console.log("bookfile upload:",bookFileUploadResult)
+
 
 
 const newBook = await bookModel.create({
