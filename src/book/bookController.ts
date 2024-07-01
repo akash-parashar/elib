@@ -55,7 +55,7 @@ const createBook = async (req: Request, res: Response, next: NextFunction) => {
         });
 
         // Delete temp.files
-        // todo: wrap in try catch...
+       
         await fs.promises.unlink(filePath);
         await fs.promises.unlink(bookFilePath);
 
@@ -203,7 +203,7 @@ const deleteBook = async (req: Request, res: Response, next: NextFunction) => {
     const bookFilePublicId =
         bookFileSplits.at(-2) + "/" + bookFileSplits.at(-1);
     console.log("bookFilePublicId", bookFilePublicId);
-    // todo: add try error block
+  
     await cloudinary.uploader.destroy(coverImagePublicId);
     await cloudinary.uploader.destroy(bookFilePublicId, {
         resource_type: "raw",
