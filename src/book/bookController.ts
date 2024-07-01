@@ -190,6 +190,7 @@ const deleteBook = async (req: Request, res: Response, next: NextFunction) => {
     if (book.author.toString() !== _req.userId) {
         return next(createHttpError(403, "You can not update others book."));
     }
+    
     // book-covers/dkzujeho0txi0yrfqjsm
     // https://res.cloudinary.com/degzfrkse/image/upload/v1712590372/book-covers/u4bt9x7sv0r0cg5cuynm.png
 
